@@ -23,5 +23,5 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker tag my-react-app your-dockerhub-username/my-react-app:latest
-          docker push ivanovayo/my-react-app:latest
+          docker tag my-react-app ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
